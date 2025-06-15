@@ -1,9 +1,10 @@
 import os
-#设置工作路径
-os.chdir(r"C:\Users\57329\Desktop\predictor")
-#获取并打印当前工作路径
-current_path = os.getcwd()
-print("当前工作路径：", current_path)
+# 获取当前文件所在目录
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# 构建模型路径
+model_path = os.path.join(current_dir, "rf.pkl")
+
 import streamlit as st
 import joblib
 import numpy as np
